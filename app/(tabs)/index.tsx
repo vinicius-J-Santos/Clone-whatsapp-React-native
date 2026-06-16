@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
 import { Contact } from '@/components/index/contact';
 
 export default function index() {
@@ -8,7 +8,7 @@ export default function index() {
                 <Text style={styles.title}>Uadizap</Text>
                 <Text style={styles.searchBar}>preucurar...</Text>
             </View>
-            <View style={styles.Main}>
+            <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView} contentContainerStyle={styles.Main}>
                 <Contact name="Mãe" message="Saiu pra onde, criatura?!" notification={20}/>
                 <Contact name="Barreto" message="Chegou em casa?" notification={0}/>
                 <Contact name="Saac" message="Eae, bora jogar?" notification={5}/>
@@ -16,8 +16,12 @@ export default function index() {
                 <Contact name="Dudu" message="E meus 20? vai paga nao?" notification={0}/>
                 <Contact name="Atacadão contrata" message="Legal esse curriculo viu" notification={2}/>
                 <Contact name="Arthur" message="Terminou os slides do Renata?" notification={1}/>
-                <Contact name="Nost" message="To com seu IP..." notification={0}/>
-            </View>
+                <Contact name="Nost" message="To com seu IP..." notification={3}/>
+                <Contact name="Miguel" message="A mãe ta perguntando onde você está" notification={0}/>
+                <Contact name="Grupo Geo" message="Coloca luto victor no final kkkk" notification={0}/>
+                <Contact name="Pera" message="Abre o Bloons ai man" notification={0}/>
+                <Contact name="Flip" message="To disc, bora mine" notification={0}/>
+            </ScrollView>
         </View>
     )
 }
@@ -38,7 +42,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#075E54',
         textAlign: 'left',
         justifyContent: 'flex-start',
-        top: 0,
         zIndex: 1
     },
     title: {
@@ -60,6 +63,10 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
 
+    scrollView: {
+        flex: 1,
+        width: '100%'
+    },
     Main: {
         flex: 1,
         width: '100%',

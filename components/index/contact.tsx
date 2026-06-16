@@ -10,7 +10,7 @@ export function Contact({ name, message, notification }: { name: string, message
             </View>
             {notification > 0 && (
                 <View style={styles.ContactNotification}>
-                    <Text>{notification}</Text>
+                    <Text style={styles.NotificationText}>{notification}</Text>
                 </View>
             )}
         </View>
@@ -52,5 +52,10 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         width: 30,
         height: 30
+    },
+    NotificationText: {
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: 16
     }
 })
