@@ -1,4 +1,26 @@
 import { Text, View, StyleSheet, Image } from 'react-native';
+import { Contact } from '@/components/index/contact';
+
+export default function index() {
+    return (
+        <View style={styles.container}>
+            <View style={styles.header}>
+                <Text style={styles.title}>Uadizap</Text>
+                <Text style={styles.searchBar}>preucurar...</Text>
+            </View>
+            <View style={styles.Main}>
+                <Contact name="Mãe" message="Saiu pra onde, criatura?!" notification={20}/>
+                <Contact name="Barreto" message="Chegou em casa?" notification={0}/>
+                <Contact name="Saac" message="Eae, bora jogar?" notification={5}/>
+                <Contact name="Benicyo" message="Fala, mano!" notification={2}/>
+                <Contact name="Dudu" message="E meus 20? vai paga nao?" notification={0}/>
+                <Contact name="Atacadão contrata" message="Legal esse curriculo viu" notification={2}/>
+                <Contact name="Arthur" message="Terminou os slides do Renata?" notification={1}/>
+                <Contact name="Nost" message="To com seu IP..." notification={0}/>
+            </View>
+        </View>
+    )
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -45,65 +67,5 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'center'
-    },
-    Contact: {
-        backgroundColor: '#fff',
-
-        width: '100%',
-        height: 80,
-        padding: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#858585',
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'row'
-    },
-    Info: {
-        display: 'flex',
-        flexDirection: 'column',
-        margin: 20,
-        width: '65%'
-    },
-    ContactInfos: {
-        fontSize: 20,
-        color: '#000',
-    },
-    ContactMessage: {
-        fontSize: 16,
-        color: '#555'
-    },
-    ContactNotification: {
-        display: 'flex',
-        alignSelf: 'flex-start',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#21a749',
-        borderRadius: 100,
-        width: 30,
-        height: 30
     }
 });
-
-export default function index() {
-    return (
-        <View style={styles.container}>
-            <View style={styles.header}>
-                <Text style={styles.title}>Uadizap</Text>
-                <Text style={styles.searchBar}>preucurar...</Text>
-            </View>
-            <View style={styles.Main}>
-                <View style={styles.Contact}>
-                    <Image source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg'}} style={{width: 50, height: 50, borderRadius: 100}} />
-                    <View style={styles.Info}>
-                        <Text style={styles.ContactInfos}>Mãe</Text>
-                        <Text style={styles.ContactMessage}>Saiu pra onde, criatura1?!</Text>
-                    </View>
-                    <View style={styles.ContactNotification}>
-                        <Text>20</Text>
-                    </View>
-                </View>
-            </View>
-            <Text style={{fontSize:16,fontWeight: 'bold'}}> FIM DA LISTA DE CONTATOS </Text>
-        </View>
-    )
-}
