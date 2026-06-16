@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
         textAlign: 'left'
     },
     searchBar: {
-        margin: '5%',
+        marginTop: 10,
+        marginLeft: '5%',
         width: '90%',
         height: '25%',
         backgroundColor: '#f0f0f0',
