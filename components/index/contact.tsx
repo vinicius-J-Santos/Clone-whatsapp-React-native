@@ -23,8 +23,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 80,
         padding: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#858585',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row'

@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, Image, ScrollView, Pressable } from 'react-native';
 import { Contact } from '@/components/index/contact';
 
 export default function index() {
@@ -9,24 +9,28 @@ export default function index() {
                 <Text style={styles.searchBar}>preucurar...</Text>
             </View>
             <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView} contentContainerStyle={styles.Main}>
-                <Contact name="Mãe" message="Saiu pra onde, criatura?!" notification={20}/>
-                <Contact name="Barreto" message="Chegou em casa?" notification={0}/>
-                <Contact name="Saac" message="Eae, bora jogar?" notification={5}/>
-                <Contact name="Benicyo" message="Fala, mano!" notification={2}/>
-                <Contact name="Dudu" message="E meus 20? vai paga nao?" notification={0}/>
-                <Contact name="Atacadão contrata" message="Legal esse curriculo viu" notification={2}/>
-                <Contact name="Arthur" message="Terminou os slides do Renata?" notification={1}/>
-                <Contact name="Nost" message="To com seu IP..." notification={3}/>
-                <Contact name="Miguel" message="A mãe ta perguntando onde você está" notification={0}/>
-                <Contact name="Grupo Geo" message="Coloca luto victor no final kkkk" notification={0}/>
-                <Contact name="Pera" message="Abre o Bloons ai man" notification={0}/>
-                <Contact name="Flip" message="To disc, bora mine" notification={0}/>
+                <Pressable style={styles.pressable}><Contact name="Mãe" message="Saiu pra onde, criatura?!" notification={20}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Barreto" message="Chegou em casa?" notification={0}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Saac" message="Eae, bora jogar?" notification={5}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Benicyo" message="Fala, mano!" notification={2}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Dudu" message="E meus 20? vai paga nao?" notification={0}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Atacadão contrata" message="Legal esse curriculo viu" notification={2}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Arthur" message="Terminou os slides do Renata?" notification={1}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Nost" message="To com seu IP..." notification={3}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Miguel" message="A mãe ta perguntando onde você está" notification={0}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Grupo Geo" message="Coloca luto victor no final kkkk" notification={0}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Pera" message="Abre o Bloons ai man" notification={0}/></Pressable>
+                <Pressable style={styles.pressable}><Contact name="Flip" message="To disc, bora mine" notification={0}/></Pressable>
             </ScrollView>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
+    pressable: {
+        width: '100%',
+        marginBottom: 2
+    },
     container: {
         flex: 1,
         display: 'flex',
