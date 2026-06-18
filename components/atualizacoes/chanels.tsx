@@ -9,7 +9,7 @@ export function Chanels({ name, followers }: { name: string, followers: string }
                 <Text style={{fontSize:16,color:'#555'}}>{followers}</Text>
             </View>
             <View style={styles.button}>
-                <Text>Seguir</Text>
+                <Text style={{color:'#fff'}}>Seguir</Text>
             </View>
         </View>
     )
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     button: {
         width: 50,
         height: 30,
-        backgroundColor: 'green',
+        backgroundColor: '#075E54',
         borderRadius: 20,
         alignItems: 'center',
         justifyContent: 'center'
