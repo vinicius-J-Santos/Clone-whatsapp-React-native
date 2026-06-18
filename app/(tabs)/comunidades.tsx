@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Pressable, Image } from 'react-native';
 
 export default function comunidades() {
     return (
@@ -7,6 +7,7 @@ export default function comunidades() {
                 <Text style={styles.title}>Comunidades</Text>
             </View>
             <View style={styles.main}>
+                <Image source={require('@/images/hobbies.png')} />                           
                 <Text style={styles.bigText}>Conecte-se com outras pessoas com o as comunidades</Text>
                 <Text style={styles.midText}>Comunidades permitem reunir pessoas em grupos de temas especificos e receber avisos de adimins com facilidade</Text>
                 <View style={styles.button}>

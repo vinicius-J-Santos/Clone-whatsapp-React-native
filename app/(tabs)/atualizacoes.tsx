@@ -22,10 +22,10 @@ export default function atualizacoes() {
                 </View>
                 <View style={styles.Chanels}>
                     <Text style={styles.midText}>Canais</Text>
-                    <Chanels name="figurinhas de tio" followers="30 mil seguidores" />
-                    <Chanels name="STICKERS" followers='873 mil seguidores' />
-                    <Chanels name="Frase do dia" followers='258 mil seguidores' />
-                    <Chanels name="Netflix BR" followers='10 M seguidores' />
+                    <Pressable style={styles.pressable}><Chanels name="figurinhas de tio" followers="30 mil seguidores" /></Pressable>
+                    <Pressable style={styles.pressable}><Chanels name="STICKERS" followers='873 mil seguidores' /></Pressable>
+                    <Pressable style={styles.pressable}><Chanels name="Frase do dia" followers='258 mil seguidores' /></Pressable>
+                    <Pressable style={styles.pressable}><Chanels name="Netflix BR" followers='10 M seguidores' /></Pressable>
                 </View>
             </ScrollView>
 

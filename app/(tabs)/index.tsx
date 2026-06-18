@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, ScrollView, Pressable } from 'react-native';
+import { Text, View, StyleSheet, TextInput, ScrollView, Pressable } from 'react-native';
 import { Contact } from '@/components/index/contact';
 
 export default function index() {
@@ -6,7 +6,7 @@ export default function index() {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.title}>Uadizap</Text>
-                <Text style={styles.searchBar}>preucurar...</Text>
+                <TextInput style={styles.searchBar} placeholderTextColor={'#999'} placeholder='Buscar contato ou mensagem'></TextInput>
             </View>
             <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView} contentContainerStyle={styles.Main}>
                 <Pressable style={styles.pressable}><Contact name="Mãe" message="Saiu pra onde, criatura?!" notification={20}/></Pressable>
@@ -63,9 +63,10 @@ const styles = StyleSheet.create({
         height: '25%',
         backgroundColor: '#f0f0f0',
         borderRadius: 15,
-        paddingLeft: 20,        
-        color: '#999',
-        fontSize: 16
+        paddingLeft: 15,        
+        fontSize: 16,
+        outlineStyle:'solid',
+        outlineWidth: 0
     },
 
     scrollView: {
